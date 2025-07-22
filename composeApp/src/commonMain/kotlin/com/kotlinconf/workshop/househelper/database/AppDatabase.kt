@@ -14,7 +14,7 @@ import com.kotlinconf.workshop.househelper.database.entities.DeviceEntity
         AreaEntity::class,
         DeviceEntity::class
     ],
-    version = 1,
+    version = 3,
     exportSchema = false,
 )
 @ConstructedBy(value = AppDatabaseConstructor::class)
