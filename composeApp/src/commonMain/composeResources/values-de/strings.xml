@@ -1,0 +1,22 @@
+<resources>
+    <string name="lightbulb">Glühbirne</string>
+    <string name="switch">Schalter</string>
+    <string name="humidity">Luftfeuchtigkeit</string>
+    <string name="thermostat">Thermostat</string>
+
+    <string name="onboarding_welcome">Willkommen bei\nHouse Helper!</string>
+    <string name="onboarding_welcome_subtitle">Ihr Smart Home Begleiter für den Alltag</string>
+    <string name="onboarding_about">Steuern Sie Ihre Smart Home Geräte mit Leichtigkeit und Komfort</string>
+    <string name="onboarding_about_subtitle">Verwalten Sie Beleuchtung, Temperatur und mehr von einem Ort aus</string>
+    <string name="onboarding_done">Ihre Smart Home Reise beginnt hier</string>
+    <string name="onboarding_done_subtitle">Machen Sie sich bereit für die Zukunft der Heimautomatisierung</string>
+    <string name="onboarding_next_button">Weiter</string>
+
+    <string name="device_action_share">Teilen</string>
+
+    <string name="dashboard_section_collapsed">Eingeklappt</string>
+    <string name="dashboard_section_expanded">Ausgeklappt</string>
+
+    <string name="dashboard_tab_rooms">Räume</string>
+    <string name="dashboard_tab_settings">Einstellungen</string>
+</resources>
