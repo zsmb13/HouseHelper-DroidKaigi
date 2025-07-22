@@ -13,5 +13,16 @@ class CameraDetailsViewModel(
     private val houseService: HouseService,
     private val deviceId: String,
 ) : ViewModel() {
-    // TODO implement ViewModel here
+    val camera: StateFlow<CameraDevice?> = houseService.getCamera(deviceId)
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = null
+        )
+
+    fun toggleCamera() {
+        viewModelScope.launch {
+            houseService.toggle(deviceId)
+        }
+    }
 }
