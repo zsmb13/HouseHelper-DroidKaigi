@@ -26,4 +26,5 @@ data class LightDetails(val deviceId: String)
 @Serializable
 data class CameraDetails(val deviceId: String)
 
-// TODO add rename screen
+@Serializable
+data class RenameDevice(val deviceId: String)
