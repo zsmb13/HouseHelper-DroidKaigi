@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavUri
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.dialog
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navDeepLink
@@ -34,9 +35,12 @@ import com.kotlinconf.workshop.househelper.theme.AppLightColorScheme
 import com.kotlinconf.workshop.househelper.theme.AppShapes
 import househelper.composeapp.generated.resources.Res
 import househelper.composeapp.generated.resources.onboarding_about
+import househelper.composeapp.generated.resources.onboarding_about_subtitle
 import househelper.composeapp.generated.resources.onboarding_done
+import househelper.composeapp.generated.resources.onboarding_done_subtitle
 import househelper.composeapp.generated.resources.onboarding_next_button
 import househelper.composeapp.generated.resources.onboarding_welcome
+import househelper.composeapp.generated.resources.onboarding_welcome_subtitle
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.first
 import org.jetbrains.compose.resources.stringResource
@@ -90,6 +94,7 @@ fun App() {
                     composable<OnboardingWelcome> {
                         OnboardingScreen(
                             text = stringResource(Res.string.onboarding_welcome),
+                            subtitle = stringResource(Res.string.onboarding_welcome_subtitle),
                             buttonText = stringResource(Res.string.onboarding_next_button),
                             icon = Icons.Default.Favorite,
                             onNext = { navController.navigate(OnboardingAbout) }
@@ -98,6 +103,7 @@ fun App() {
                     composable<OnboardingAbout> {
                         OnboardingScreen(
                             text = stringResource(Res.string.onboarding_about),
+                            subtitle = stringResource(Res.string.onboarding_about_subtitle),
                             buttonText = stringResource(Res.string.onboarding_next_button),
                             icon = Icons.Default.Info,
                             onNext = { navController.navigate(OnboardingDone) }
@@ -106,6 +112,7 @@ fun App() {
                     composable<OnboardingDone> {
                         OnboardingScreen(
                             text = stringResource(Res.string.onboarding_done),
+                            subtitle = stringResource(Res.string.onboarding_done_subtitle),
                             buttonText = stringResource(Res.string.onboarding_next_button),
                             icon = Icons.Default.Home,
                             onNext = {

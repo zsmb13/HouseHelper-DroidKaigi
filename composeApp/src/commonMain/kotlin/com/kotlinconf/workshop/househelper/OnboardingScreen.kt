@@ -8,11 +8,14 @@ import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -35,6 +38,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun OnboardingScreen(
     text: String,
+    subtitle: String,
     buttonText: String,
     icon: ImageVector,
     onNext: () -> Unit,
@@ -63,26 +67,35 @@ fun OnboardingScreen(
                 elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
             ) {
                 Column(
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(16.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
                     verticalArrangement = Arrangement.Center,
-//                    horizontalAlignment = Alignment.CenterHorizontally,
+                    horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Icon(
                         imageVector = icon,
                         contentDescription = null,
-//                        modifier = Modifier.size(96.dp),
+                        modifier = Modifier.size(96.dp),
                         tint = MaterialTheme.colorScheme.primary
                     )
 
-//                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(24.dp))
 
                     Text(
                         text = text,
                         style = MaterialTheme.typography.headlineMedium,
                         textAlign = TextAlign.Center,
                         color = MaterialTheme.colorScheme.onSurface,
+                    )
+
+                    Spacer(modifier = Modifier.height(24.dp))
+
+                    Text(
+                        text = subtitle,
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(horizontal = 16.dp),
                     )
                 }
             }
@@ -95,7 +108,7 @@ fun OnboardingScreen(
             },
             modifier = Modifier
                 .align(Alignment.BottomCenter)
-//                .fillMaxWidth(0.7f)
+                .fillMaxWidth(0.7f)
                 .padding(24.dp),
             shape = MaterialTheme.shapes.medium
         ) {
